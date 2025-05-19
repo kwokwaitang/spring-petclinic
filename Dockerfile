@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java 
+FROM eclipse-temurin:17-jdk-alpine
 LABEL maintainer="kwok.tang68@gmail.com" 
-COPY /target/spring-petclinic-1.5.1.jar /home/spring-petclinic-1.5.1.jar 
-CMD ["java","-jar","/home/spring-petclinic-1.5.1.jar"]
+COPY /build/libs/spring-petclinic-3.4.0.jar spring-petclinic.jar 
+CMD ["java","-jar","spring-petclinic.jar"]
